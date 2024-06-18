@@ -1,8 +1,3 @@
-```
-grep -rRule */*.tf | cut -f2 -d: | sed 's/TODO/#/' | sed 's|//|#|g' | sed 's/# #/#/' | cut -f2 -d'#'
-```
-
-
 ## General
 Rule. Split data processing logic from resource blocks
 Rule. Use URI as resource identifier
@@ -51,3 +46,7 @@ Rule. Keep intermediate attributes for debug purposes
 
 ## HCL hints
 Rule. Constants computation order is not important in HCL
+
+```
+grep -rRule */*.tf | cut -f2 -d: | sed 's/TODO/#/' | sed 's|//|#|g' | sed 's/# #/#/' | cut -f2 -d'#'
+```

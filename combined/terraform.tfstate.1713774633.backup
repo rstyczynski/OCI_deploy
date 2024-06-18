@@ -1,0 +1,664 @@
+{
+  "version": 4,
+  "terraform_version": "1.5.7",
+  "serial": 68,
+  "lineage": "7004053d-2889-f572-4939-00fbe1a58369",
+  "outputs": {
+    "compartments_full": {
+      "value": {
+        "/cmp_team1": {
+          "defined_tags": null,
+          "description": "let's play",
+          "enable_delete": null,
+          "freeform_tags": null,
+          "name": "cmp_team1",
+          "parent_compartment_fqn": "/"
+        },
+        "/cmp_team1/cmp_network": {
+          "defined_tags": null,
+          "description": "network resources",
+          "enable_delete": null,
+          "freeform_tags": null,
+          "name": "cmp_network",
+          "parent_compartment_fqn": "/cmp_team1"
+        }
+      },
+      "type": [
+        "object",
+        {
+          "/cmp_team1": [
+            "object",
+            {
+              "defined_tags": [
+                "map",
+                "string"
+              ],
+              "description": "string",
+              "enable_delete": "bool",
+              "freeform_tags": [
+                "map",
+                "string"
+              ],
+              "name": "string",
+              "parent_compartment_fqn": "string"
+            }
+          ],
+          "/cmp_team1/cmp_network": [
+            "object",
+            {
+              "defined_tags": [
+                "map",
+                "string"
+              ],
+              "description": "string",
+              "enable_delete": "bool",
+              "freeform_tags": [
+                "map",
+                "string"
+              ],
+              "name": "string",
+              "parent_compartment_fqn": "string"
+            }
+          ]
+        }
+      ]
+    },
+    "level1_compartments": {
+      "value": {
+        "/cmp_team1": {}
+      },
+      "type": [
+        "object",
+        {
+          "/cmp_team1": [
+            "object",
+            {}
+          ]
+        }
+      ]
+    },
+    "level2_compartments": {
+      "value": {
+        "/cmp_team1/cmp_network": {}
+      },
+      "type": [
+        "object",
+        {
+          "/cmp_team1/cmp_network": [
+            "object",
+            {}
+          ]
+        }
+      ]
+    },
+    "level3_compartments": {
+      "value": {},
+      "type": [
+        "object",
+        {}
+      ]
+    },
+    "level4_compartments": {
+      "value": {},
+      "type": [
+        "object",
+        {}
+      ]
+    },
+    "level5_compartments": {
+      "value": {},
+      "type": [
+        "object",
+        {}
+      ]
+    },
+    "level6_compartments": {
+      "value": {},
+      "type": [
+        "object",
+        {}
+      ]
+    },
+    "vcn_deploy": {
+      "value": {
+        "/cmp_team1/cmp_network/vcn_test1": {
+          "cidr_block": "172.16.0.0/20",
+          "compartment_id": null,
+          "defined_tags": null,
+          "description": null,
+          "display_name": "vcn_test1",
+          "dns_label": null,
+          "freeform_tags": null
+        },
+        "/cmp_team1/cmp_network/vcn_test2": {
+          "cidr_block": "10.0.1.0/24",
+          "compartment_id": null,
+          "defined_tags": null,
+          "description": null,
+          "display_name": "vcn_test2",
+          "dns_label": null,
+          "freeform_tags": null
+        }
+      },
+      "type": [
+        "object",
+        {
+          "/cmp_team1/cmp_network/vcn_test1": [
+            "object",
+            {
+              "cidr_block": "string",
+              "compartment_id": "dynamic",
+              "defined_tags": [
+                "map",
+                "string"
+              ],
+              "description": "dynamic",
+              "display_name": "string",
+              "dns_label": "string",
+              "freeform_tags": [
+                "map",
+                "string"
+              ]
+            }
+          ],
+          "/cmp_team1/cmp_network/vcn_test2": [
+            "object",
+            {
+              "cidr_block": "string",
+              "compartment_id": "dynamic",
+              "defined_tags": [
+                "map",
+                "string"
+              ],
+              "description": "dynamic",
+              "display_name": "string",
+              "dns_label": "string",
+              "freeform_tags": [
+                "map",
+                "string"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "oci_core_vcn",
+      "name": "vcns",
+      "provider": "provider[\"registry.terraform.io/oracle/oci\"]",
+      "instances": [
+        {
+          "index_key": "/cmp_team1/cmp_network/vcn_test1",
+          "schema_version": 0,
+          "attributes": {
+            "byoipv6cidr_blocks": [],
+            "byoipv6cidr_details": [],
+            "cidr_block": "172.16.0.0/20",
+            "cidr_blocks": [
+              "172.16.0.0/20"
+            ],
+            "compartment_id": "ocid1.compartment.oc1..aaaaaaaatwdds6xed36yz4zqobletebjfsu2jknm63exdioumapo336snnwq",
+            "default_dhcp_options_id": "ocid1.dhcpoptions.oc1.me-dubai-1.aaaaaaaapkuii56j7kvyl7tzdblunz2oeyykntj4uy5cn6tgppxpjckkkl5q",
+            "default_route_table_id": "ocid1.routetable.oc1.me-dubai-1.aaaaaaaa6c7sgnhfaenxdimz6mhthznfk5dyoy3fde7vzqlz5lc4zzbfp5fq",
+            "default_security_list_id": "ocid1.securitylist.oc1.me-dubai-1.aaaaaaaaoeujfr2cs5nuwkbp2g53jh6a456tzipz6jgezmfeextsdyptga2q",
+            "defined_tags": {
+              "Oracle-Tags.CreatedBy": "default/ryszard.styczynski@oracle.com",
+              "Oracle-Tags.CreatedOn": "2024-04-20T21:26:45.208Z"
+            },
+            "display_name": "vcn_test1",
+            "dns_label": null,
+            "freeform_tags": {
+              "dept": "development"
+            },
+            "id": "ocid1.vcn.oc1.me-dubai-1.amaaaaaasyse3maauz6sb4jgdc4wwiunxv26m2qh4jm4sid57dcx6zghhjda",
+            "ipv6cidr_blocks": [],
+            "ipv6private_cidr_blocks": [],
+            "is_ipv6enabled": false,
+            "is_oracle_gua_allocation_enabled": null,
+            "state": "AVAILABLE",
+            "time_created": "2024-04-20 21:26:45.278 +0000 UTC",
+            "timeouts": null,
+            "vcn_domain_name": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.vcn.module.comm.data.local_file.load_compartment_data",
+            "module.vcn.module.comm.data.local_file.load_vcn_data",
+            "module.vcn.module.comm.data.oci_objectstorage_namespace.os_namespace",
+            "module.vcn.module.comm.data.oci_objectstorage_object.created_objects_compartments",
+            "module.vcn.module.comm.data.oci_objectstorage_object.created_objects_vcns",
+            "oci_identity_compartment.level1_compartments",
+            "oci_identity_compartment.level2_compartments",
+            "oci_identity_compartment.level3_compartments",
+            "oci_identity_compartment.level4_compartments",
+            "oci_identity_compartment.level5_compartments",
+            "oci_identity_compartment.level6_compartments"
+          ]
+        },
+        {
+          "index_key": "/cmp_team1/cmp_network/vcn_test2",
+          "schema_version": 0,
+          "attributes": {
+            "byoipv6cidr_blocks": [],
+            "byoipv6cidr_details": [],
+            "cidr_block": "10.0.1.0/24",
+            "cidr_blocks": [
+              "10.0.1.0/24"
+            ],
+            "compartment_id": "ocid1.compartment.oc1..aaaaaaaatwdds6xed36yz4zqobletebjfsu2jknm63exdioumapo336snnwq",
+            "default_dhcp_options_id": "ocid1.dhcpoptions.oc1.me-dubai-1.aaaaaaaar4ulqp5d7tvoi4dnn3pfxnhqmb7wmn37qfanhdvktn2wle53aqfa",
+            "default_route_table_id": "ocid1.routetable.oc1.me-dubai-1.aaaaaaaadapfexjvyip6teedyia4xfm37s3vbjuavjuto6bdxa65vqrsphsa",
+            "default_security_list_id": "ocid1.securitylist.oc1.me-dubai-1.aaaaaaaangeo6pgxm4euvhayyvdw4dw3pjb2qvbn4bhshyqrjzvrz6sm3lkq",
+            "defined_tags": {
+              "Oracle-Tags.CreatedBy": "default/ryszard.styczynski@oracle.com",
+              "Oracle-Tags.CreatedOn": "2024-04-20T21:26:45.199Z"
+            },
+            "display_name": "vcn_test2",
+            "dns_label": null,
+            "freeform_tags": {
+              "dept": "development"
+            },
+            "id": "ocid1.vcn.oc1.me-dubai-1.amaaaaaasyse3maa62ja3g4qkc2htnlymzu2ndndmoulmmqowsgdpncgenzq",
+            "ipv6cidr_blocks": [],
+            "ipv6private_cidr_blocks": [],
+            "is_ipv6enabled": false,
+            "is_oracle_gua_allocation_enabled": null,
+            "state": "AVAILABLE",
+            "time_created": "2024-04-20 21:26:45.276 +0000 UTC",
+            "timeouts": null,
+            "vcn_domain_name": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.vcn.module.comm.data.local_file.load_compartment_data",
+            "module.vcn.module.comm.data.local_file.load_vcn_data",
+            "module.vcn.module.comm.data.oci_objectstorage_namespace.os_namespace",
+            "module.vcn.module.comm.data.oci_objectstorage_object.created_objects_compartments",
+            "module.vcn.module.comm.data.oci_objectstorage_object.created_objects_vcns",
+            "oci_identity_compartment.level1_compartments",
+            "oci_identity_compartment.level2_compartments",
+            "oci_identity_compartment.level3_compartments",
+            "oci_identity_compartment.level4_compartments",
+            "oci_identity_compartment.level5_compartments",
+            "oci_identity_compartment.level6_compartments"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "oci_identity_compartment",
+      "name": "level1_compartments",
+      "provider": "provider[\"registry.terraform.io/oracle/oci\"]",
+      "instances": [
+        {
+          "index_key": "/cmp_team1",
+          "schema_version": 0,
+          "attributes": {
+            "compartment_id": "ocid1.tenancy.oc1..aaaaaaaao33ryc7wv422dmz7pvsgtuiwkpashkrraafjknvqvu5avfc4wl3a",
+            "defined_tags": {
+              "Oracle-Tags.CreatedBy": "default/ryszard.styczynski@oracle.com",
+              "Oracle-Tags.CreatedOn": "2024-04-20T21:25:20.816Z"
+            },
+            "description": "let's play",
+            "enable_delete": null,
+            "freeform_tags": {
+              "dept": "development"
+            },
+            "id": "ocid1.compartment.oc1..aaaaaaaac3ewbmx2favie7mifuhlgasenflus3dyy6hqccmyariptujv6lfa",
+            "inactive_state": null,
+            "is_accessible": true,
+            "name": "cmp_team1",
+            "state": "ACTIVE",
+            "time_created": "2024-04-20 21:25:21.386 +0000 UTC",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjo1NDAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "oci_identity_compartment",
+      "name": "level2_compartments",
+      "provider": "provider[\"registry.terraform.io/oracle/oci\"]",
+      "instances": [
+        {
+          "index_key": "/cmp_team1/cmp_network",
+          "schema_version": 0,
+          "attributes": {
+            "compartment_id": "ocid1.compartment.oc1..aaaaaaaac3ewbmx2favie7mifuhlgasenflus3dyy6hqccmyariptujv6lfa",
+            "defined_tags": {
+              "Oracle-Tags.CreatedBy": "default/ryszard.styczynski@oracle.com",
+              "Oracle-Tags.CreatedOn": "2024-04-20T21:25:47.354Z"
+            },
+            "description": "network resources",
+            "enable_delete": null,
+            "freeform_tags": {
+              "dept": "development"
+            },
+            "id": "ocid1.compartment.oc1..aaaaaaaatwdds6xed36yz4zqobletebjfsu2jknm63exdioumapo336snnwq",
+            "inactive_state": null,
+            "is_accessible": true,
+            "name": "cmp_network",
+            "state": "ACTIVE",
+            "time_created": "2024-04-20 21:25:47.451 +0000 UTC",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjo1NDAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "oci_identity_compartment.level1_compartments"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.cmp.module.comm",
+      "mode": "data",
+      "type": "oci_objectstorage_namespace",
+      "name": "os_namespace",
+      "provider": "module.cmp.provider[\"registry.terraform.io/oracle/oci\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "compartment_id": null,
+            "id": "ObjectStorageNamespaceDataSource-0",
+            "namespace": "axzxglhlranb"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "module": "module.cmp.module.comm",
+      "mode": "data",
+      "type": "oci_objectstorage_object",
+      "name": "created_objects_compartments",
+      "provider": "module.cmp.provider[\"registry.terraform.io/oracle/oci\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "base64_encode_content": false,
+            "bucket": "bucket-20240412-2237",
+            "cache_control": null,
+            "content": "{\"/cmp_team1\":{\"compartment_id\":\"ocid1.tenancy.oc1..aaaaaaaao33ryc7wv422dmz7pvsgtuiwkpashkrraafjknvqvu5avfc4wl3a\",\"defined_tags\":{\"Oracle-Tags.CreatedBy\":\"default/ryszard.styczynski@oracle.com\",\"Oracle-Tags.CreatedOn\":\"2024-04-20T21:25:20.816Z\"},\"description\":\"let's play\",\"enable_delete\":null,\"freeform_tags\":{\"dept\":\"development\"},\"id\":\"ocid1.compartment.oc1..aaaaaaaac3ewbmx2favie7mifuhlgasenflus3dyy6hqccmyariptujv6lfa\",\"inactive_state\":null,\"is_accessible\":true,\"name\":\"cmp_team1\",\"state\":\"ACTIVE\",\"time_created\":\"2024-04-20 21:25:21.386 +0000 UTC\",\"timeouts\":null},\"/cmp_team1/cmp_network\":{\"compartment_id\":\"ocid1.compartment.oc1..aaaaaaaac3ewbmx2favie7mifuhlgasenflus3dyy6hqccmyariptujv6lfa\",\"defined_tags\":{\"Oracle-Tags.CreatedBy\":\"default/ryszard.styczynski@oracle.com\",\"Oracle-Tags.CreatedOn\":\"2024-04-20T21:25:47.354Z\"},\"description\":\"network resources\",\"enable_delete\":null,\"freeform_tags\":{\"dept\":\"development\"},\"id\":\"ocid1.compartment.oc1..aaaaaaaatwdds6xed36yz4zqobletebjfsu2jknm63exdioumapo336snnwq\",\"inactive_state\":null,\"is_accessible\":true,\"name\":\"cmp_network\",\"state\":\"ACTIVE\",\"time_created\":\"2024-04-20 21:25:47.451 +0000 UTC\",\"timeouts\":null}}",
+            "content_disposition": null,
+            "content_encoding": null,
+            "content_language": null,
+            "content_length": "1166",
+            "content_length_limit": 1048576,
+            "content_md5": "W4CTj8b6esGo8r2U6VP9SQ==",
+            "content_type": "application/json",
+            "http_response_cache_control": null,
+            "http_response_content_disposition": null,
+            "http_response_content_encoding": null,
+            "http_response_content_language": null,
+            "http_response_content_type": null,
+            "http_response_expires": null,
+            "id": "ObjectStorageObjectDataSource-2007528413",
+            "metadata": {},
+            "namespace": "axzxglhlranb",
+            "object": "oci/infra/created_objects_compartments.json",
+            "storage_tier": "Standard",
+            "version_id": "1271ae88-98fe-4d79-9aad-422dc8b96d13"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "module": "module.cmp.module.comm",
+      "mode": "data",
+      "type": "oci_objectstorage_object",
+      "name": "created_objects_vcns",
+      "provider": "module.cmp.provider[\"registry.terraform.io/oracle/oci\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "base64_encode_content": false,
+            "bucket": "bucket-20240412-2237",
+            "cache_control": null,
+            "content": "{\"/cmp_team1/cmp_network/vcn_test1\":{\"byoipv6cidr_blocks\":[],\"byoipv6cidr_details\":[],\"cidr_block\":\"172.16.0.0/20\",\"cidr_blocks\":[\"172.16.0.0/20\"],\"compartment_id\":\"ocid1.compartment.oc1..aaaaaaaatwdds6xed36yz4zqobletebjfsu2jknm63exdioumapo336snnwq\",\"default_dhcp_options_id\":\"ocid1.dhcpoptions.oc1.me-dubai-1.aaaaaaaapkuii56j7kvyl7tzdblunz2oeyykntj4uy5cn6tgppxpjckkkl5q\",\"default_route_table_id\":\"ocid1.routetable.oc1.me-dubai-1.aaaaaaaa6c7sgnhfaenxdimz6mhthznfk5dyoy3fde7vzqlz5lc4zzbfp5fq\",\"default_security_list_id\":\"ocid1.securitylist.oc1.me-dubai-1.aaaaaaaaoeujfr2cs5nuwkbp2g53jh6a456tzipz6jgezmfeextsdyptga2q\",\"defined_tags\":{\"Oracle-Tags.CreatedBy\":\"default/ryszard.styczynski@oracle.com\",\"Oracle-Tags.CreatedOn\":\"2024-04-20T21:26:45.208Z\"},\"display_name\":\"vcn_test1\",\"dns_label\":null,\"freeform_tags\":{\"dept\":\"development\"},\"id\":\"ocid1.vcn.oc1.me-dubai-1.amaaaaaasyse3maauz6sb4jgdc4wwiunxv26m2qh4jm4sid57dcx6zghhjda\",\"ipv6cidr_blocks\":[],\"ipv6private_cidr_blocks\":[],\"is_ipv6enabled\":false,\"is_oracle_gua_allocation_enabled\":null,\"state\":\"AVAILABLE\",\"time_created\":\"2024-04-20 21:26:45.278 +0000 UTC\",\"timeouts\":null,\"vcn_domain_name\":null},\"/cmp_team1/cmp_network/vcn_test2\":{\"byoipv6cidr_blocks\":[],\"byoipv6cidr_details\":[],\"cidr_block\":\"10.0.1.0/24\",\"cidr_blocks\":[\"10.0.1.0/24\"],\"compartment_id\":\"ocid1.compartment.oc1..aaaaaaaatwdds6xed36yz4zqobletebjfsu2jknm63exdioumapo336snnwq\",\"default_dhcp_options_id\":\"ocid1.dhcpoptions.oc1.me-dubai-1.aaaaaaaar4ulqp5d7tvoi4dnn3pfxnhqmb7wmn37qfanhdvktn2wle53aqfa\",\"default_route_table_id\":\"ocid1.routetable.oc1.me-dubai-1.aaaaaaaadapfexjvyip6teedyia4xfm37s3vbjuavjuto6bdxa65vqrsphsa\",\"default_security_list_id\":\"ocid1.securitylist.oc1.me-dubai-1.aaaaaaaangeo6pgxm4euvhayyvdw4dw3pjb2qvbn4bhshyqrjzvrz6sm3lkq\",\"defined_tags\":{\"Oracle-Tags.CreatedBy\":\"default/ryszard.styczynski@oracle.com\",\"Oracle-Tags.CreatedOn\":\"2024-04-20T21:26:45.199Z\"},\"display_name\":\"vcn_test2\",\"dns_label\":null,\"freeform_tags\":{\"dept\":\"development\"},\"id\":\"ocid1.vcn.oc1.me-dubai-1.amaaaaaasyse3maa62ja3g4qkc2htnlymzu2ndndmoulmmqowsgdpncgenzq\",\"ipv6cidr_blocks\":[],\"ipv6private_cidr_blocks\":[],\"is_ipv6enabled\":false,\"is_oracle_gua_allocation_enabled\":null,\"state\":\"AVAILABLE\",\"time_created\":\"2024-04-20 21:26:45.276 +0000 UTC\",\"timeouts\":null,\"vcn_domain_name\":null}}",
+            "content_disposition": null,
+            "content_encoding": null,
+            "content_language": null,
+            "content_length": "2291",
+            "content_length_limit": 1048576,
+            "content_md5": "o7hvgOkfMHUE43vOBeVuTA==",
+            "content_type": "application/json",
+            "http_response_cache_control": null,
+            "http_response_content_disposition": null,
+            "http_response_content_encoding": null,
+            "http_response_content_language": null,
+            "http_response_content_type": null,
+            "http_response_expires": null,
+            "id": "ObjectStorageObjectDataSource-1064148780",
+            "metadata": {},
+            "namespace": "axzxglhlranb",
+            "object": "oci/infra/created_objects_vcns.json",
+            "storage_tier": "Standard",
+            "version_id": "7544106e-27c8-4c61-94c2-d5df207e9a0b"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "module": "module.cmp.module.comm",
+      "mode": "managed",
+      "type": "oci_objectstorage_object",
+      "name": "created_objects",
+      "provider": "module.cmp.provider[\"registry.terraform.io/oracle/oci\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "bucket-20240412-2237",
+            "cache_control": null,
+            "content": "5b80938fc6fa7ac1a8f2bd94e953fd49",
+            "content_disposition": null,
+            "content_encoding": null,
+            "content_language": null,
+            "content_length": "1166",
+            "content_md5": "W4CTj8b6esGo8r2U6VP9SQ==",
+            "content_type": "application/json",
+            "delete_all_object_versions": false,
+            "id": "n/axzxglhlranb/b/bucket-20240412-2237/o/oci%2Finfra%2Fcreated_objects_compartments.json",
+            "metadata": {},
+            "namespace": "axzxglhlranb",
+            "object": "oci/infra/created_objects_compartments.json",
+            "opc_sse_kms_key_id": null,
+            "source": null,
+            "source_uri_details": [],
+            "state": "COMPLETED",
+            "storage_tier": "Standard",
+            "timeouts": null,
+            "version_id": "1271ae88-98fe-4d79-9aad-422dc8b96d13",
+            "work_request_id": ""
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.cmp.module.comm.data.oci_objectstorage_namespace.os_namespace",
+            "module.cmp.oci_identity_compartment.level1_compartments",
+            "module.cmp.oci_identity_compartment.level2_compartments",
+            "module.cmp.oci_identity_compartment.level3_compartments",
+            "module.cmp.oci_identity_compartment.level4_compartments",
+            "module.cmp.oci_identity_compartment.level5_compartments",
+            "module.cmp.oci_identity_compartment.level6_compartments",
+            "oci_identity_compartment.level1_compartments",
+            "oci_identity_compartment.level2_compartments",
+            "oci_identity_compartment.level3_compartments",
+            "oci_identity_compartment.level4_compartments",
+            "oci_identity_compartment.level5_compartments",
+            "oci_identity_compartment.level6_compartments"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.vcn.module.comm",
+      "mode": "data",
+      "type": "oci_objectstorage_namespace",
+      "name": "os_namespace",
+      "provider": "module.vcn.provider[\"registry.terraform.io/oracle/oci\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "compartment_id": null,
+            "id": "ObjectStorageNamespaceDataSource-0",
+            "namespace": "axzxglhlranb"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "module": "module.vcn.module.comm",
+      "mode": "data",
+      "type": "oci_objectstorage_object",
+      "name": "created_objects_compartments",
+      "provider": "module.vcn.provider[\"registry.terraform.io/oracle/oci\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "base64_encode_content": false,
+            "bucket": "bucket-20240412-2237",
+            "cache_control": null,
+            "content": "{\"/cmp_team1\":{\"compartment_id\":\"ocid1.tenancy.oc1..aaaaaaaao33ryc7wv422dmz7pvsgtuiwkpashkrraafjknvqvu5avfc4wl3a\",\"defined_tags\":{\"Oracle-Tags.CreatedBy\":\"default/ryszard.styczynski@oracle.com\",\"Oracle-Tags.CreatedOn\":\"2024-04-20T21:25:20.816Z\"},\"description\":\"let's play\",\"enable_delete\":null,\"freeform_tags\":{\"dept\":\"development\"},\"id\":\"ocid1.compartment.oc1..aaaaaaaac3ewbmx2favie7mifuhlgasenflus3dyy6hqccmyariptujv6lfa\",\"inactive_state\":null,\"is_accessible\":true,\"name\":\"cmp_team1\",\"state\":\"ACTIVE\",\"time_created\":\"2024-04-20 21:25:21.386 +0000 UTC\",\"timeouts\":null},\"/cmp_team1/cmp_network\":{\"compartment_id\":\"ocid1.compartment.oc1..aaaaaaaac3ewbmx2favie7mifuhlgasenflus3dyy6hqccmyariptujv6lfa\",\"defined_tags\":{\"Oracle-Tags.CreatedBy\":\"default/ryszard.styczynski@oracle.com\",\"Oracle-Tags.CreatedOn\":\"2024-04-20T21:25:47.354Z\"},\"description\":\"network resources\",\"enable_delete\":null,\"freeform_tags\":{\"dept\":\"development\"},\"id\":\"ocid1.compartment.oc1..aaaaaaaatwdds6xed36yz4zqobletebjfsu2jknm63exdioumapo336snnwq\",\"inactive_state\":null,\"is_accessible\":true,\"name\":\"cmp_network\",\"state\":\"ACTIVE\",\"time_created\":\"2024-04-20 21:25:47.451 +0000 UTC\",\"timeouts\":null}}",
+            "content_disposition": null,
+            "content_encoding": null,
+            "content_language": null,
+            "content_length": "1166",
+            "content_length_limit": 1048576,
+            "content_md5": "W4CTj8b6esGo8r2U6VP9SQ==",
+            "content_type": "application/json",
+            "http_response_cache_control": null,
+            "http_response_content_disposition": null,
+            "http_response_content_encoding": null,
+            "http_response_content_language": null,
+            "http_response_content_type": null,
+            "http_response_expires": null,
+            "id": "ObjectStorageObjectDataSource-2007528413",
+            "metadata": {},
+            "namespace": "axzxglhlranb",
+            "object": "oci/infra/created_objects_compartments.json",
+            "storage_tier": "Standard",
+            "version_id": "1271ae88-98fe-4d79-9aad-422dc8b96d13"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "module": "module.vcn.module.comm",
+      "mode": "data",
+      "type": "oci_objectstorage_object",
+      "name": "created_objects_vcns",
+      "provider": "module.vcn.provider[\"registry.terraform.io/oracle/oci\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "base64_encode_content": false,
+            "bucket": "bucket-20240412-2237",
+            "cache_control": null,
+            "content": "{\"/cmp_team1/cmp_network/vcn_test1\":{\"byoipv6cidr_blocks\":[],\"byoipv6cidr_details\":[],\"cidr_block\":\"172.16.0.0/20\",\"cidr_blocks\":[\"172.16.0.0/20\"],\"compartment_id\":\"ocid1.compartment.oc1..aaaaaaaatwdds6xed36yz4zqobletebjfsu2jknm63exdioumapo336snnwq\",\"default_dhcp_options_id\":\"ocid1.dhcpoptions.oc1.me-dubai-1.aaaaaaaapkuii56j7kvyl7tzdblunz2oeyykntj4uy5cn6tgppxpjckkkl5q\",\"default_route_table_id\":\"ocid1.routetable.oc1.me-dubai-1.aaaaaaaa6c7sgnhfaenxdimz6mhthznfk5dyoy3fde7vzqlz5lc4zzbfp5fq\",\"default_security_list_id\":\"ocid1.securitylist.oc1.me-dubai-1.aaaaaaaaoeujfr2cs5nuwkbp2g53jh6a456tzipz6jgezmfeextsdyptga2q\",\"defined_tags\":{\"Oracle-Tags.CreatedBy\":\"default/ryszard.styczynski@oracle.com\",\"Oracle-Tags.CreatedOn\":\"2024-04-20T21:26:45.208Z\"},\"display_name\":\"vcn_test1\",\"dns_label\":null,\"freeform_tags\":{\"dept\":\"development\"},\"id\":\"ocid1.vcn.oc1.me-dubai-1.amaaaaaasyse3maauz6sb4jgdc4wwiunxv26m2qh4jm4sid57dcx6zghhjda\",\"ipv6cidr_blocks\":[],\"ipv6private_cidr_blocks\":[],\"is_ipv6enabled\":false,\"is_oracle_gua_allocation_enabled\":null,\"state\":\"AVAILABLE\",\"time_created\":\"2024-04-20 21:26:45.278 +0000 UTC\",\"timeouts\":null,\"vcn_domain_name\":null},\"/cmp_team1/cmp_network/vcn_test2\":{\"byoipv6cidr_blocks\":[],\"byoipv6cidr_details\":[],\"cidr_block\":\"10.0.1.0/24\",\"cidr_blocks\":[\"10.0.1.0/24\"],\"compartment_id\":\"ocid1.compartment.oc1..aaaaaaaatwdds6xed36yz4zqobletebjfsu2jknm63exdioumapo336snnwq\",\"default_dhcp_options_id\":\"ocid1.dhcpoptions.oc1.me-dubai-1.aaaaaaaar4ulqp5d7tvoi4dnn3pfxnhqmb7wmn37qfanhdvktn2wle53aqfa\",\"default_route_table_id\":\"ocid1.routetable.oc1.me-dubai-1.aaaaaaaadapfexjvyip6teedyia4xfm37s3vbjuavjuto6bdxa65vqrsphsa\",\"default_security_list_id\":\"ocid1.securitylist.oc1.me-dubai-1.aaaaaaaangeo6pgxm4euvhayyvdw4dw3pjb2qvbn4bhshyqrjzvrz6sm3lkq\",\"defined_tags\":{\"Oracle-Tags.CreatedBy\":\"default/ryszard.styczynski@oracle.com\",\"Oracle-Tags.CreatedOn\":\"2024-04-20T21:26:45.199Z\"},\"display_name\":\"vcn_test2\",\"dns_label\":null,\"freeform_tags\":{\"dept\":\"development\"},\"id\":\"ocid1.vcn.oc1.me-dubai-1.amaaaaaasyse3maa62ja3g4qkc2htnlymzu2ndndmoulmmqowsgdpncgenzq\",\"ipv6cidr_blocks\":[],\"ipv6private_cidr_blocks\":[],\"is_ipv6enabled\":false,\"is_oracle_gua_allocation_enabled\":null,\"state\":\"AVAILABLE\",\"time_created\":\"2024-04-20 21:26:45.276 +0000 UTC\",\"timeouts\":null,\"vcn_domain_name\":null}}",
+            "content_disposition": null,
+            "content_encoding": null,
+            "content_language": null,
+            "content_length": "2291",
+            "content_length_limit": 1048576,
+            "content_md5": "o7hvgOkfMHUE43vOBeVuTA==",
+            "content_type": "application/json",
+            "http_response_cache_control": null,
+            "http_response_content_disposition": null,
+            "http_response_content_encoding": null,
+            "http_response_content_language": null,
+            "http_response_content_type": null,
+            "http_response_expires": null,
+            "id": "ObjectStorageObjectDataSource-1064148780",
+            "metadata": {},
+            "namespace": "axzxglhlranb",
+            "object": "oci/infra/created_objects_vcns.json",
+            "storage_tier": "Standard",
+            "version_id": "7544106e-27c8-4c61-94c2-d5df207e9a0b"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "module": "module.vcn.module.comm",
+      "mode": "managed",
+      "type": "oci_objectstorage_object",
+      "name": "created_objects",
+      "provider": "module.vcn.provider[\"registry.terraform.io/oracle/oci\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "bucket-20240412-2237",
+            "cache_control": null,
+            "content": "a3b86f80e91f307504e37bce05e56e4c",
+            "content_disposition": null,
+            "content_encoding": null,
+            "content_language": null,
+            "content_length": "2291",
+            "content_md5": "o7hvgOkfMHUE43vOBeVuTA==",
+            "content_type": "application/json",
+            "delete_all_object_versions": false,
+            "id": "n/axzxglhlranb/b/bucket-20240412-2237/o/oci%2Finfra%2Fcreated_objects_vcns.json",
+            "metadata": {},
+            "namespace": "axzxglhlranb",
+            "object": "oci/infra/created_objects_vcns.json",
+            "opc_sse_kms_key_id": null,
+            "source": null,
+            "source_uri_details": [],
+            "state": "COMPLETED",
+            "storage_tier": "Standard",
+            "timeouts": null,
+            "version_id": "7544106e-27c8-4c61-94c2-d5df207e9a0b",
+            "work_request_id": ""
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.vcn.module.comm.data.local_file.load_compartment_data",
+            "module.vcn.module.comm.data.local_file.load_vcn_data",
+            "module.vcn.module.comm.data.oci_objectstorage_namespace.os_namespace",
+            "module.vcn.module.comm.data.oci_objectstorage_object.created_objects_compartments",
+            "module.vcn.module.comm.data.oci_objectstorage_object.created_objects_vcns",
+            "module.vcn.oci_core_vcn.vcns",
+            "oci_core_vcn.vcns",
+            "oci_identity_compartment.level1_compartments",
+            "oci_identity_compartment.level2_compartments",
+            "oci_identity_compartment.level3_compartments",
+            "oci_identity_compartment.level4_compartments",
+            "oci_identity_compartment.level5_compartments",
+            "oci_identity_compartment.level6_compartments"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
