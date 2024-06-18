@@ -10,5 +10,7 @@
 **/*.tfstate.*
 
 .vscode
+cspell.json
+
 _model
 _sandbox
