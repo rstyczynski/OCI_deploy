@@ -1,9 +1,11 @@
 .DS_Store
 **/.DS_Store/*
+
 .terraform
 **/.terraform/*
 
-# .tfstate files
 *.tfstate
 *.tfstate.*
-.DS_Store
+**/*.tfstate
+**/*.tfstate.*
+
