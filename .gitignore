@@ -10,3 +10,5 @@
 **/*.tfstate.*
 
 .vscode
+_model
+_sandbox
