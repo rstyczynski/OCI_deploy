@@ -115,7 +115,7 @@ locals {
 
     # save
     created_objects_name = "created_objects_network_security_group"
-    created_objects = var.created_objects != null ? var.created_objects : {
+    created_objects = var.created_objects != null ? var.created_objects : { 
         networksecuritygroups = oci_core_network_security_group.nsg_set
         networksecuritygroup_rules = merge(
             oci_core_network_security_group_security_rule.egress_nsg_set,

@@ -3,6 +3,9 @@
 # save information about objects
 #
 
+#
+# data save to a local file
+#
 resource "null_resource" "store_created_objects_cmp" {
   count = local.data_interface == "file" ? 1 : 0
 
@@ -19,6 +22,9 @@ resource "null_resource" "store_created_objects_cmp" {
   }
 }
 
+#
+# data save to an object storage
+#
 #data "oci_objectstorage_namespace" "os_namespace" {}
 resource "oci_objectstorage_object" "created_objects" {
   count = local.data_interface == "bucket" ? 1 : 0
